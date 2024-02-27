@@ -36,11 +36,13 @@ management:
     health:
       show-details: always
       enabled: true
+    loggers:
+      enabled: true  
     prometheus:
       enabled: true
     web:
       exposure:
-        include: health,prometheus,metrics,caches,beans
+        include: health,prometheus,loggers,metrics,caches,beans
   endpoint:
     health:
       probes:
